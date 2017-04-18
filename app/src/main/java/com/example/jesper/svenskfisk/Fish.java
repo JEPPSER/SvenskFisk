@@ -12,6 +12,7 @@ public class Fish {
     private final String[] allWaters = {"Sjöar", "Hav", "Åar", "Bäckar"};
     private String name;
     private String sciName;
+    private String[] locations;
     private String[] waters;
     private String method;
     private String food;
