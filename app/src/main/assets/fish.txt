@@ -1,0 +1,9 @@
+Name:Abborre
+SciName:.
+Locations:.
+Waters:.
+Method:.
+Food:.
+Description:.
+LightWeight:.
+HeavyWeight:.

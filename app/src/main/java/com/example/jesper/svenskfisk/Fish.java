@@ -1,7 +1,8 @@
 package com.example.jesper.svenskfisk;
 
 /**
- * Created by JeSpEr on 2017-04-18.
+ * Class representing a Fish.
+ * @author Jesper Bergstrom
  */
 public class Fish {
 

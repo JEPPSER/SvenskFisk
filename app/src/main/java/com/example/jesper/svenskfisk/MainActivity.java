@@ -11,11 +11,16 @@ import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
 
+/**
+ * Main Activity. This is the start screen with the main functions
+ * can be accessed.
+ * @author Jesper Bergstrom
+ */
 public class MainActivity extends AppCompatActivity {
 
-    public Button searchBtn;
-    public Button idBtn;
-    public Button browseBtn;
+    private Button searchBtn;
+    private Button idBtn;
+    private Button browseBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
