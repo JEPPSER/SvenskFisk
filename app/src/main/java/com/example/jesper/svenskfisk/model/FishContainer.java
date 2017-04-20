@@ -1,4 +1,6 @@
-package com.example.jesper.svenskfisk;
+package com.example.jesper.svenskfisk.model;
+
+import com.example.jesper.svenskfisk.model.Fish;
 
 import java.util.ArrayList;
 

@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.jesper.svenskfisk.SearchActivity">
+    tools:context=".search.SearchActivity">
 
     <SearchView
         android:layout_width="wrap_content"
@@ -19,4 +19,14 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@android:id/list"
+        android:layout_below="@+id/searchView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        tools:listitem="@android:layout/simple_list_item_1" />
+
 </RelativeLayout>

@@ -1,4 +1,4 @@
-package com.example.jesper.svenskfisk;
+package com.example.jesper.svenskfisk.model;
 
 /**
  * Class representing a Fish.

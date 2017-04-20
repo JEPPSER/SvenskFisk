@@ -1,13 +1,15 @@
-package com.example.jesper.svenskfisk;
+package com.example.jesper.svenskfisk.browse;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class IdActivity extends AppCompatActivity {
+import com.example.jesper.svenskfisk.R;
+
+public class BrowseActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_id);
+        setContentView(R.layout.activity_browse);
     }
 }
