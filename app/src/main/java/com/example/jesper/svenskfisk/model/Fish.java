@@ -9,8 +9,8 @@ public class Fish {
     private final String[] allAreas = {"Blekinge", "Bohuslän", "Dalarna", "Dalsland", "Gotland", "Gästrikland",
             "Halland", "Hälsingland", "Härjedalen", "Jämtland", "Lappland", "Medelpad", "Norrbotten", "Närke",
             "Skåne", "Småland", "Södermanland", "Uppland", "Värmland", "Västerbotten", "Västergötland", "Västmanland",
-            "Ångermanland", "Öland", "Östergötland"};
-    private final String[] allWaters = {"Sjöar", "Hav", "Åar", "Bäckar"};
+            "Ångermanland", "Öland", "Östergötland", "Hela Sverige"};
+    private final String[] allWaters = {"Sötvatten", "Bräckvatten", "Saltvatten"};
     private String name;
     private String sciName;
     private String[] locations;
