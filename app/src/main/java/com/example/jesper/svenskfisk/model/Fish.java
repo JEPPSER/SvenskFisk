@@ -18,8 +18,8 @@ public class Fish {
     private String method;
     private String food;
     private String description;
-    private int lightWeight;
-    private int heavyWeight;
+    private int normalWeight;
+    private int maxWeight;
 
     public Fish(){
 
@@ -81,19 +81,19 @@ public class Fish {
         return description;
     }
 
-    public void setLightWeight(int lightWeight){
-        this.lightWeight = lightWeight;
+    public void setNormalWeight(int normalWeight){
+        this.normalWeight = normalWeight;
     }
 
-    public int getLightWeight(){
-        return lightWeight;
+    public int getNormalWeight(){
+        return normalWeight;
     }
 
-    public void setHeavyWeightWeight(int heavyWeight){
-        this.heavyWeight = heavyWeight;
+    public void setMaxWeight(int maxWeight){
+        this.maxWeight = maxWeight;
     }
 
-    public int getHeavyWeightWeight(){
-        return heavyWeight;
+    public int getMaxWeight(){
+        return maxWeight;
     }
 }
