@@ -6,8 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.jesper.svenskfisk.browse.BrowseActivity;
-import com.example.jesper.svenskfisk.identification.IdActivity;
 import com.example.jesper.svenskfisk.search.SearchActivity;
 
 /**
@@ -26,8 +24,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         onSearchBtnTap();
-        onBrowseBtnTap();
-        onIdBtnTap();
     }
 
     public void onSearchBtnTap() {
@@ -38,30 +34,6 @@ public class MainActivity extends AppCompatActivity {
                 Intent search = new Intent(MainActivity.this, SearchActivity.class);
 
                 startActivity(search);
-            }
-        });
-    }
-
-    public void onBrowseBtnTap() {
-        browseBtn = (Button) findViewById(R.id.browseBtn);
-        browseBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent browse = new Intent(MainActivity.this, BrowseActivity.class);
-
-                startActivity(browse);
-            }
-        });
-    }
-
-    public void onIdBtnTap() {
-        idBtn = (Button) findViewById(R.id.idBtn);
-        idBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent identify = new Intent(MainActivity.this, IdActivity.class);
-
-                startActivity(identify);
             }
         });
     }

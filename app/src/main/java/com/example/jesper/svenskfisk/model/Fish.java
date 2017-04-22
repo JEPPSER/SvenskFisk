@@ -1,10 +1,12 @@
 package com.example.jesper.svenskfisk.model;
 
+import java.io.Serializable;
+
 /**
  * Class representing a Fish.
  * @author Jesper Bergstrom
  */
-public class Fish {
+public class Fish implements Serializable{
 
     private final String[] allAreas = {"Blekinge", "Bohuslän", "Dalarna", "Dalsland", "Gotland", "Gästrikland",
             "Halland", "Hälsingland", "Härjedalen", "Jämtland", "Lappland", "Medelpad", "Norrbotten", "Närke",
@@ -13,7 +15,7 @@ public class Fish {
     private final String[] allWaters = {"Sötvatten", "Bräckvatten", "Saltvatten"};
     private String name;
     private String sciName;
-    private String[] locations;
+    private String locations;
     private String[] waters;
     private String method;
     private String food;
@@ -41,11 +43,11 @@ public class Fish {
         return sciName;
     }
 
-    public void setLocations(String[] locations){
+    public void setLocations(String locations){
         this.locations = locations;
     }
 
-    public String[] getLocations(){
+    public String getLocations(){
         return locations;
     }
 
@@ -96,4 +98,5 @@ public class Fish {
     public int getMaxWeight(){
         return maxWeight;
     }
+
 }

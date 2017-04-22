@@ -1,0 +1,28 @@
+﻿Name:Abborre
+SciName:Perca fluviatilis
+Locations:Hela Sverige
+Waters:Sötvatten,Bräckvatten
+Method:Abborren är lättfångad och hugger på det mesta. Vanliga metoder är bland annat mete och kast med diverse drag.
+Food:När Abborren är ung äter den mest bottendjur som mygglarver, vattengråsuggor, märlor och kräftungar. När den växt till sig börjar den äta mindre fiskar som löja, nors, elritsa, småspigg, mört och yngel av den egna arten.
+Description:.
+NormalWeight:300
+MaxWeight:3000
+Name:Gädda
+SciName:Esox lucius
+Locations:Hela Sverige
+Waters:Sötvatten,Bräckvatten
+Method:Gädda fiskas oftas med spinn eller trolling med stora drag. Wobbler, skeddrag eller stora spinnare och jiggar är populära.
+Food:Gäddan äter de flesta fiskar i passande storlek, även andra gäddor.
+Description:.
+NormalWeight:1500
+MaxWeight:20000
+Name:Gös
+SciName:.
+Locations:.
+Waters:.
+Method:.
+Food:.
+Description:.
+LightWeight:.
+HeavyWeight:.
+end

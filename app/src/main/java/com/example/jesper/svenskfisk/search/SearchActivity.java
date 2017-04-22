@@ -1,11 +1,15 @@
 package com.example.jesper.svenskfisk.search;
 
 import android.app.ListActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.SearchView;
 
 import com.example.jesper.svenskfisk.R;
+import com.example.jesper.svenskfisk.display.DisplayFishActivity;
 import com.example.jesper.svenskfisk.model.Fish;
 import com.example.jesper.svenskfisk.model.FishContainer;
 
@@ -33,6 +37,21 @@ public class SearchActivity extends ListActivity {
         adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listItems);
         setListAdapter(adapter);
         search();
+        super.getListView().setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView parentView, View childView,
+                                    int position, long id) {
+
+                Intent display = new Intent(SearchActivity.this, DisplayFishActivity.class);
+                Bundle b = new Bundle();
+                b.putSerializable("fish", container.getList().get(position));
+                display.putExtras(b);
+                startActivity(display);
+            }
+
+            public void onNothingClick(AdapterView parentView) {
+
+            }
+        });
     }
 
     /**
@@ -49,7 +68,7 @@ public class SearchActivity extends ListActivity {
 
                 container.getList().clear();
                 listItems.clear();
-                InputStream iS = null;
+                InputStream iS;
                 try {
                     iS = getAssets().open("fish.txt");
                     BufferedReader reader = new BufferedReader(new InputStreamReader(iS, "ISO-8859-1"));

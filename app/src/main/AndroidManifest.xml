@@ -24,8 +24,7 @@
             android:value="@integer/google_play_services_version" />
 
         <activity android:name=".search.SearchActivity" />
-        <activity android:name=".browse.BrowseActivity" />
-        <activity android:name=".identification.IdActivity"></activity>
+        <activity android:name=".display.DisplayFishActivity"></activity>
     </application>
 
 </manifest>
