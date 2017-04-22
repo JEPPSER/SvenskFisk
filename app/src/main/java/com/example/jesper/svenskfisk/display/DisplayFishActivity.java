@@ -1,5 +1,7 @@
 package com.example.jesper.svenskfisk.display;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
@@ -44,6 +46,7 @@ public class DisplayFishActivity extends AppCompatActivity {
         name = result;
 
         int reIm = this.getResources().getIdentifier(name, "drawable", this.getPackageName());
-        fishImage.setBackgroundResource(reIm);
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), reIm);
+        fishImage.setImageBitmap(bitmap);
     }
 }
