@@ -19,6 +19,7 @@ public class DisplayFishActivity extends AppCompatActivity {
 
     private TextView fishText;
     private ImageView fishImage;
+    private TextView sciText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +30,9 @@ public class DisplayFishActivity extends AppCompatActivity {
         Bundle b = this.getIntent().getExtras();
         Fish fish = (Fish) b.getSerializable("fish");
         fishText.setText(fish.getName());
+
+        sciText = (TextView) findViewById(R.id.sciText);
+        sciText.setText(fish.getSciName());
 
         fishImage = (ImageView) findViewById(R.id.fishImage);
 

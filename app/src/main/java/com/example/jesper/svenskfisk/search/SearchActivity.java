@@ -80,11 +80,15 @@ public class SearchActivity extends ListActivity {
                         if (parts[0].equals("Name") && temp.toLowerCase().contains(query.toLowerCase())) {
                             Fish fish = new Fish();
                             fish.setName(temp);
-                            //TODO: Set all other properties
-
                             container.add(fish);
+
+                            temp = reader.readLine();
+                            parts = temp.split(":");
+                            fish.setSciName(parts[1]);
                         }
-                        temp = reader.readLine();
+                        else {
+                            temp = reader.readLine();
+                        }
                     }
                 } catch (IOException e) {
                     e.printStackTrace();
