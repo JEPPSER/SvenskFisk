@@ -22,6 +22,7 @@ import java.util.ArrayList;
 /**
  * Activity for searching for fish. A list of matching results will be displayed.
  * @author Jesper Bergstrom
+ * @name SearchActivity.java
  */
 public class SearchActivity extends ListActivity {
 
@@ -82,33 +83,41 @@ public class SearchActivity extends ListActivity {
                             fish.setName(temp);
                             container.add(fish);
 
+                            // Set Scientific name
                             temp = reader.readLine();
                             parts = temp.split(":");
                             fish.setSciName(parts[1]);
 
+                            // Set locations
                             temp = reader.readLine();
                             parts = temp.split(":");
                             fish.setLocations(parts[1]);
 
+                            // Set waters
                             temp = reader.readLine();
                             parts = temp.split(":");
                             parts = parts[1].split(",");
                             fish.setWaters(parts);
 
+                            // Set methods
                             temp = reader.readLine();
                             parts = temp.split(":");
                             fish.setMethod(parts[1]);
 
+                            // Set food
                             temp = reader.readLine();
                             parts = temp.split(":");
                             fish.setFood(parts[1]);
 
+                            // Skip line
                             reader.readLine();
 
+                            // Set normal weight
                             temp = reader.readLine();
                             parts = temp.split(":");
                             fish.setNormalWeight(Integer.parseInt(parts[1]));
 
+                            // Set max weight
                             temp = reader.readLine();
                             parts = temp.split(":");
                             fish.setMaxWeight(Integer.parseInt(parts[1]));

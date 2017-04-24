@@ -14,6 +14,7 @@ import com.example.jesper.svenskfisk.model.Fish;
  * Activity that displays a fish and it's information that has been
  * selected from a list in the parent activity.
  * @author Jesper Bergstrom
+ * @name DisplayFishActivity.java
  */
 public class DisplayFishActivity extends AppCompatActivity {
 
@@ -31,11 +32,13 @@ public class DisplayFishActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_fish);
 
+        // Set fish name
         fishText = (TextView) findViewById(R.id.fishText);
         Bundle b = this.getIntent().getExtras();
         Fish fish = (Fish) b.getSerializable("fish");
         fishText.setText(fish.getName());
 
+        // Set scientific name
         sciText = (TextView) findViewById(R.id.sciText);
         sciText.setText(fish.getSciName());
 
@@ -54,13 +57,16 @@ public class DisplayFishActivity extends AppCompatActivity {
         }
         name = result;
 
+        // Set fish image
         int reIm = this.getResources().getIdentifier(name, "drawable", this.getPackageName());
         Bitmap bitmap = BitmapFactory.decodeResource(getResources(), reIm);
         fishImage.setImageBitmap(bitmap);
 
+        // Set location
         locationText = (TextView) findViewById(R.id.locationText);
         locationText.setText(fish.getLocations());
 
+        // Set waters
         waterText = (TextView) findViewById(R.id.waterText);
         result = "";
         for(int i=0; i<fish.getWaters().length - 1; i++){
@@ -69,14 +75,17 @@ public class DisplayFishActivity extends AppCompatActivity {
         result += fish.getWaters()[fish.getWaters().length-1];
         waterText.setText(result);
 
+        // Set methods
         methodText = (TextView) findViewById(R.id.methodText);
         methodText.setText(fish.getMethod());
 
+        // Set Weight
         weightText = (TextView) findViewById(R.id.weightText);
         result = "Normal vikt ligger runt " + fish.getNormalWeight() + "g och de kan väga upp till " + fish.getMaxWeight() + "g.";
         weightText.setText(result);
 
+        // Set food
         foodText = (TextView) findViewById(R.id.foodText);
-        foodText.setText(fish.getMethod());
+        foodText.setText(fish.getFood());
     }
 }

@@ -1,6 +1,6 @@
 Name:Abborre
 SciName:Perca fluviatilis
-Locations:Hela Sverige
+Locations:Abborren finns i våra insjöar och i det bräckta vattnet i östersjökustens skärgård.
 Waters:Sötvatten,Bräckvatten
 Method:Abborren är lättfångad och hugger på det mesta. Vanliga metoder är bland annat mete och kast med diverse drag.
 Food:När Abborren är ung äter den mest bottendjur som mygglarver, vattengråsuggor, märlor och kräftungar. När den växt till sig börjar den äta mindre fiskar som löja, nors, elritsa, småspigg, mört och yngel av den egna arten.
@@ -9,7 +9,7 @@ NormalWeight:300
 MaxWeight:3000
 Name:Gädda
 SciName:Esox lucius
-Locations:Hela Sverige
+Locations:Gäddan förekommer över hela landet i sjöar, åar och vid kusterna, undantaget för fjälltrakterna.
 Waters:Sötvatten,Bräckvatten
 Method:Gädda fiskas oftas med spinn eller trolling med stora drag. Wobbler, skeddrag eller stora spinnare och jiggar är populära.
 Food:Gäddan äter de flesta fiskar i passande storlek, även andra gäddor.
@@ -18,11 +18,29 @@ NormalWeight:1500
 MaxWeight:20000
 Name:Gös
 SciName:Sander lucioperca
-Locations:Hela Sverige
+Locations:De största fångsterna tas i Vänern, Mälaren och Hjälmaren.Gösen förekommer längs hela ostkusten, söderut till Södermanland och i Svealands inland. Utplantering av gös i mindre sjöar görs på flera håll i landet.
 Waters:Sötvatten,Bräckvatten
-Method:.
-Food:.
+Method:Liksom gäddan fiskar man gös mest med spinn med stora drag som wobblers, skeddrag, jiggar eller stora spinnare.
+Food:Då gösynglet har blivit 10 cm består födan av fisk.
 Description:.
-NormalWeight:1
-MaxWeight:2
+NormalWeight:1500
+MaxWeight:15000
+Name:Braxen
+SciName:Abramis brama
+Locations:Braxen är vanlig i södra och mellersta Sveriges sjöar och åar, men förekommer även längs Östersjöns kuster, ända upp till Bottniska viken.
+Waters:Sötvatten,Bräckvatten
+Method:Braxen fångas genom mete. Populärt bete är bland annat bröd, majs och mask.
+Food:Unga fiskar är i huvudsak planktonätare, medan äldre främst lever på insektslarver och andra bottendjur, som de suger upp från botten med sin utskjutbara mun.
+Description:.
+NormalWeight:1500
+MaxWeight:11500
+Name:Fjällröding
+SciName:Salvenlinus alpinus
+Locations:Den trivs bäst som ensam art i kallt och klart, syrerikt vatten i våra fjälltrakter men även på större djup i sjöar i syd- och mellansverige.
+Waters:Sötvatten,Bräckvatten
+Method:Den vanligaste metoden är pimpling men fjällrödingen kan även fångas med fluga och drag.
+Food:Fjällrödingen livnär sig av larver, insekter, musslor och småfiskar, till exempel elritsa. Mindre fjällrödingar äter plankton.
+Description:.
+NormalWeight:700
+MaxWeight:85000
 end

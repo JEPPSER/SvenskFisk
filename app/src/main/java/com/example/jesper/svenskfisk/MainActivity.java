@@ -12,6 +12,7 @@ import com.example.jesper.svenskfisk.search.SearchActivity;
  * Main Activity. This is the start screen with the main functions
  * can be accessed.
  * @author Jesper Bergstrom
+ * @name MainActivity.java
  */
 public class MainActivity extends AppCompatActivity {
 

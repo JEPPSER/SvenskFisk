@@ -1,12 +1,11 @@
 package com.example.jesper.svenskfisk.model;
 
-import com.example.jesper.svenskfisk.model.Fish;
-
 import java.util.ArrayList;
 
 /**
  * Class holding a list for all the fish that are to be displayed.
  * @author Jesper Bergstrom
+ * @name FishContainer.java
  */
 public class FishContainer {
 

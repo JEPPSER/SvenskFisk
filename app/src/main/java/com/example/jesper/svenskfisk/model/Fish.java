@@ -5,6 +5,7 @@ import java.io.Serializable;
 /**
  * Class representing a Fish.
  * @author Jesper Bergstrom
+ * @name Fish.java
  */
 public class Fish implements Serializable{
 
