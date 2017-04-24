@@ -24,6 +24,7 @@ public class DisplayFishActivity extends AppCompatActivity {
     private TextView waterText;
     private TextView methodText;
     private TextView weightText;
+    private TextView foodText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,5 +75,8 @@ public class DisplayFishActivity extends AppCompatActivity {
         weightText = (TextView) findViewById(R.id.weightText);
         result = "Normal vikt ligger runt " + fish.getNormalWeight() + "g och de kan väga upp till " + fish.getMaxWeight() + "g.";
         weightText.setText(result);
+
+        foodText = (TextView) findViewById(R.id.foodText);
+        foodText.setText(fish.getMethod());
     }
 }

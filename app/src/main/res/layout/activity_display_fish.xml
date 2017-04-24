@@ -132,6 +132,21 @@
                 android:layout_below="@+id/weightHeader"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Föda"
+                android:id="@+id/foodHeader"
+                android:layout_marginTop="23dp"
+                android:textColor="@color/abc_input_method_navigation_guard" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/foodText" />
         </LinearLayout>
     </ScrollView>
 

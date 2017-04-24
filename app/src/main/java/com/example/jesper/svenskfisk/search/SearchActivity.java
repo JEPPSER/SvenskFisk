@@ -99,8 +99,10 @@ public class SearchActivity extends ListActivity {
                             parts = temp.split(":");
                             fish.setMethod(parts[1]);
 
-                            //TODO: read these lines and set them to a fish object.
-                            reader.readLine();
+                            temp = reader.readLine();
+                            parts = temp.split(":");
+                            fish.setFood(parts[1]);
+
                             reader.readLine();
 
                             temp = reader.readLine();
