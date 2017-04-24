@@ -1,28 +1,28 @@
 Name:Abborre
 SciName:Perca fluviatilis
-Locations:.
-Waters:.
-Method:.
+Locations:Hela Sverige
+Waters:Sötvatten,Bräckvatten
+Method:Abborren är lättfångad och hugger på det mesta. Vanliga metoder är bland annat mete och kast med diverse drag.
 Food:.
 Description:.
-NormalWeight:.
-MaxWeight:.
+NormalWeight:300
+MaxWeight:3000
 Name:Gädda
 SciName:Esox lucius
-Locations:.
-Waters:.
-Method:.
+Locations:Hela Sverige
+Waters:Sötvatten,Bräckvatten
+Method:Gädda fiskas oftas med spinn eller trolling med stora drag. Wobbler, skeddrag eller stora spinnare och jiggar är populära.
 Food:.
 Description:.
-NormalWeight:.
-MaxWeight:.
+NormalWeight:1500
+MaxWeight:20000
 Name:Gös
 SciName:Sander lucioperca
-Locations:.
-Waters:.
+Locations:Hela Sverige
+Waters:Sötvatten,Bräckvatten
 Method:.
 Food:.
 Description:.
-LightWeight:.
-HeavyWeight:.
+NormalWeight:1
+MaxWeight:2
 end

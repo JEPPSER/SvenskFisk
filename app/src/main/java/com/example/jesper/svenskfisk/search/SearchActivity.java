@@ -85,6 +85,31 @@ public class SearchActivity extends ListActivity {
                             temp = reader.readLine();
                             parts = temp.split(":");
                             fish.setSciName(parts[1]);
+
+                            temp = reader.readLine();
+                            parts = temp.split(":");
+                            fish.setLocations(parts[1]);
+
+                            temp = reader.readLine();
+                            parts = temp.split(":");
+                            parts = parts[1].split(",");
+                            fish.setWaters(parts);
+
+                            temp = reader.readLine();
+                            parts = temp.split(":");
+                            fish.setMethod(parts[1]);
+
+                            //TODO: read these lines and set them to a fish object.
+                            reader.readLine();
+                            reader.readLine();
+
+                            temp = reader.readLine();
+                            parts = temp.split(":");
+                            fish.setNormalWeight(Integer.parseInt(parts[1]));
+
+                            temp = reader.readLine();
+                            parts = temp.split(":");
+                            fish.setMaxWeight(Integer.parseInt(parts[1]));
                         }
                         else {
                             temp = reader.readLine();

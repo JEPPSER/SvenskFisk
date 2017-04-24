@@ -20,6 +20,10 @@ public class DisplayFishActivity extends AppCompatActivity {
     private TextView fishText;
     private ImageView fishImage;
     private TextView sciText;
+    private TextView locationText;
+    private TextView waterText;
+    private TextView methodText;
+    private TextView weightText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,5 +56,23 @@ public class DisplayFishActivity extends AppCompatActivity {
         int reIm = this.getResources().getIdentifier(name, "drawable", this.getPackageName());
         Bitmap bitmap = BitmapFactory.decodeResource(getResources(), reIm);
         fishImage.setImageBitmap(bitmap);
+
+        locationText = (TextView) findViewById(R.id.locationText);
+        locationText.setText(fish.getLocations());
+
+        waterText = (TextView) findViewById(R.id.waterText);
+        result = "";
+        for(int i=0; i<fish.getWaters().length - 1; i++){
+            result += fish.getWaters()[i] + ", ";
+        }
+        result += fish.getWaters()[fish.getWaters().length-1];
+        waterText.setText(result);
+
+        methodText = (TextView) findViewById(R.id.methodText);
+        methodText.setText(fish.getMethod());
+
+        weightText = (TextView) findViewById(R.id.weightText);
+        result = "Normal vikt ligger runt " + fish.getNormalWeight() + "g och de kan väga upp till " + fish.getMaxWeight() + "g.";
+        weightText.setText(result);
     }
 }
