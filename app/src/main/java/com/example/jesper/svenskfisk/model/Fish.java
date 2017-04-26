@@ -9,18 +9,15 @@ import java.io.Serializable;
  */
 public class Fish implements Serializable{
 
-    private final String[] allAreas = {"Blekinge", "Bohuslän", "Dalarna", "Dalsland", "Gotland", "Gästrikland",
-            "Halland", "Hälsingland", "Härjedalen", "Jämtland", "Lappland", "Medelpad", "Norrbotten", "Närke",
-            "Skåne", "Småland", "Södermanland", "Uppland", "Värmland", "Västerbotten", "Västergötland", "Västmanland",
-            "Ångermanland", "Öland", "Östergötland", "Hela Sverige"};
+    private final String[] allLooks = {"Grön", "Röd", "Mörk", "Ljus", "Silver", "Brun", "Smal", "Tjock", "Platt",};
     private final String[] allWaters = {"Sötvatten", "Bräckvatten", "Saltvatten"};
+    private String[] looks;
     private String name;
     private String sciName;
     private String locations;
     private String[] waters;
     private String method;
     private String food;
-    private String description;
     private int normalWeight;
     private int maxWeight;
 
@@ -76,12 +73,12 @@ public class Fish implements Serializable{
         return food;
     }
 
-    public void setDescription(String description){
-        this.description = description;
+    public void setLooks(String[] looks){
+        this.looks = looks;
     }
 
-    public String getDescription(){
-        return description;
+    public String[] getLooks(){
+        return looks;
     }
 
     public void setNormalWeight(int normalWeight){
@@ -99,5 +96,4 @@ public class Fish implements Serializable{
     public int getMaxWeight(){
         return maxWeight;
     }
-
 }

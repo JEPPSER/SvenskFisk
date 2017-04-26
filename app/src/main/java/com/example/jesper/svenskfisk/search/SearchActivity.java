@@ -109,8 +109,11 @@ public class SearchActivity extends ListActivity {
                             parts = temp.split(":");
                             fish.setFood(parts[1]);
 
-                            // Skip line
-                            reader.readLine();
+                            // Set looks
+                            temp = reader.readLine();
+                            parts = temp.split(":");
+                            parts = parts[1].split(",");
+                            fish.setLooks(parts);
 
                             // Set normal weight
                             temp = reader.readLine();
