@@ -25,7 +25,8 @@
 
         <activity android:name=".search.SearchActivity" />
         <activity android:name=".display.DisplayFishActivity" />
-        <activity android:name=".identification.IdActivity"></activity>
+        <activity android:name=".identification.IdActivity" />
+        <activity android:name=".identification.FishListActivity"></activity>
     </application>
 
 </manifest>

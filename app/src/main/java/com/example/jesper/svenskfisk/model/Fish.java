@@ -9,8 +9,6 @@ import java.io.Serializable;
  */
 public class Fish implements Serializable{
 
-    private final String[] allLooks = {"Grön", "Röd", "Mörk", "Ljus", "Silver", "Brun", "Smal", "Tjock", "Platt",};
-    private final String[] allWaters = {"Sötvatten", "Bräckvatten", "Saltvatten"};
     private String[] looks;
     private String name;
     private String sciName;
@@ -20,6 +18,7 @@ public class Fish implements Serializable{
     private String food;
     private int normalWeight;
     private int maxWeight;
+    private int matches;
 
     public Fish(){
 
@@ -95,5 +94,26 @@ public class Fish implements Serializable{
 
     public int getMaxWeight(){
         return maxWeight;
+    }
+
+    public void setMatches(int matches){
+        this.matches = matches;
+    }
+
+    public int getMatches(){
+        return matches;
+    }
+
+    public String[] getTags(){
+        String[] arr1 = getWaters();
+        String[] arr2 = getLooks();
+        String[] result = new String[arr1.length + arr2.length];
+        for(int i=0; i<arr1.length; i++){
+            result[i] = arr1[i];
+        }
+        for(int i=0; i<arr2.length; i++){
+            result[arr1.length + i] = arr2[i];
+        }
+        return result;
     }
 }
