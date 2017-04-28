@@ -1,9 +1,16 @@
 package com.example.jesper.svenskfisk.identification;
 
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import com.example.jesper.svenskfisk.R;
+import com.example.jesper.svenskfisk.display.DisplayFishActivity;
 import com.example.jesper.svenskfisk.model.Fish;
 import com.example.jesper.svenskfisk.model.FishContainer;
 import com.example.jesper.svenskfisk.model.FishSorter;
@@ -16,7 +23,9 @@ import java.util.ArrayList;
 
 public class FishListActivity extends AppCompatActivity {
 
-    FishContainer container = new FishContainer();
+    private FishContainer container = new FishContainer();
+    private LinearLayout vbox;
+    private ArrayList<Fish> list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,10 +36,43 @@ public class FishListActivity extends AppCompatActivity {
 
         search(); // Populates container.
         FishSorter sorter = new FishSorter();
-        ArrayList<Fish> list = sorter.sort(container.getList(), tags); // Sorts container
+        list = sorter.sort(container.getList(), tags); // Sorts container
+        ImageView[] iv = new ImageView[list.size()];
+
+        vbox = (LinearLayout) findViewById(R.id.vbox);
 
         for(int i=0; i<list.size(); i++){
-            System.out.println(list.get(i).getName());
+            iv[i] = new ImageView(this);
+
+            String name = list.get(i).getName().toLowerCase();
+            String result = "";
+
+            for(int j=0; j<name.length(); j++){
+                if(name.charAt(j) == 'ö')
+                    result += "o";
+                else if(name.charAt(j) == 'å' || name.charAt(j) == 'ä')
+                    result += "a";
+                else
+                    result += name.charAt(j);
+            }
+            name = result;
+
+            int reIm = this.getResources().getIdentifier(name, "drawable", this.getPackageName());
+            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), reIm);
+            iv[i].setImageBitmap(bitmap);
+            iv[i].setAdjustViewBounds(true);
+            iv[i].setId(i);
+            vbox.addView(iv[i]);
+            iv[i].setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    Fish fish = list.get(v.getId());
+                    Intent display = new Intent(FishListActivity.this, DisplayFishActivity.class);
+                    Bundle b = new Bundle();
+                    b.putSerializable("fish", fish);
+                    display.putExtras(b);
+                    startActivity(display);
+                }
+            });
         }
     }
 
